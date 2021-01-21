@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "e881bcd9-a1be-4669-b95b-8727f9ed2200",
+		"name": "Academia_Geek_Backend",
+		"description": "Pruebas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST insertar registro en TIPO_MARCA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DESC_MARCA\":\"Kia\", \r\n    \"ACTIVO\":\"S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/marca",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST insertar registro en TIPO_LINEA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DESC_LINEA\":\"Stinger\", \r\n    \"ID_MARCA\":\"5\",\r\n    \"ACTIVO\":\"S\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/linea",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"linea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST insertar registro en VEHICULOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NRO_PLACA\":\"PAM-309\", \r\n    \"ID_LINEA\":\"10\",\r\n    \"MODELO\":\"2015\",\r\n    \"FECHA_VEN_SEGURO\":\"2015-02-04\",\r\n    \"FECHA_VEN_TECNOMECANICA\":\"2016-04-09\",\r\n    \"FECHA_VEN_CONTRATODO\":\"2016-10-03\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/vehiculo",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ver número de registros en VEHICULOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/vehiculo",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"vehiculo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ver número de registros en TIPO_MARCA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/marca",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"marca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ver número de registros en TIPO_LINEA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/linea",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"linea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ver el MAX y el MIN modelo de VEHICULOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/modelo",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"modelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET saber la cantidad de marcas repetidas por lineas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/marcas-repetidas",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"marcas-repetidas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST para ver los vehiculos dentro de un rango de fechas de vencimiento del seguro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rango_menor\":\"2000-01-01\", \r\n    \"rango_mayor\":\"2005-01-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/vehiculos-fecha-ven",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"vehiculos-fecha-ven"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST para ver los vehiculos que están dentro de un rango de modelos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rango_menor\":\"2018\", \r\n    \"rango_mayor\":\"2020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/vehiculos-modelo",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"vehiculos-modelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT para modificar los datos de un registro de la tabla VEHICULOS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NRO_PLACA\":\"III-111\", \r\n    \"ID_LINEA\":\"3\", \r\n    \"MODELO\":\"2010\", \r\n    \"FECHA_VEN_SEGURO\":\"2010-02-15\", \r\n    \"FECHA_VEN_TECNOMECANICA\":\"2010-04-21\", \r\n    \"FECHA_VEN_CONTRATODO\":\"2010-10-11\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/actualizar-vehiculo/AAI-999",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"actualizar-vehiculo",
+						"AAI-999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para consultar muchas tablas de forma unica",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/union-tablas",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"union-tablas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para consultar de forma unica si están activos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/union-tablas-activo",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"union-tablas-activo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para sumar todos los modelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/suma-modelos",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"suma-modelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para promediar todos los modelos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/prom-modelos",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"prom-modelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para ver las lineas activas y las inactivas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/activos-inactivos",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"activos-inactivos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para unir tablas con INNER JOIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/union-tablas-inner",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"union-tablas-inner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para unir tablas con LEFT JOIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/union-tablas-left",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"union-tablas-left"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para consultar todos los vehículos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/consulta-vehiculos",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"consulta-vehiculos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para consultar todas la lineas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/consulta-lineas",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"consulta-lineas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET para consultar todas las marcas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reto-bd-msql.herokuapp.com/api/consulta-marcas",
+					"protocol": "https",
+					"host": [
+						"reto-bd-msql",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"consulta-marcas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

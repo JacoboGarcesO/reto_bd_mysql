@@ -16,4 +16,7 @@ blore0txwork1nobrsy0-mysql.services.clever-cloud.com
 
 PORT: 
 3306
+
+RUTA RAIZ DE LA APP DESPLEGADA:
+https://reto-bd-msql.herokuapp.com/
 */
